@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/stopwatch.css" />
+    <link rel="stylesheet" href="CSS/header.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="clock.html">Clock</a>
+        <a href="index.html">Stopwatch</a>
+      </nav>
+    </header>
+    <div id="container">
+      <div id="stopwatch">
+        <div class="digit" id="hr">00</div>
+        <div class="txt">Hr&nbsp;&nbsp;&nbsp;</div>
+        <div class="digit" id="min">00</div>
+        <div class="txt">Min</div>
+        <div class="digit" id="sec">00</div>
+        <div class="txt">Sec</div>
+        <div class="digit" id="count">00</div>
+        <div class="txt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <!-- <div class="txt">sec</div>  -->
+      </div>
+      <div id="buttons">
+        <button type="button" class="btn" id="start" onclick="start()">
+          Start
+        </button>
+        <button type="button" class="btn" id="stop" onclick="stop()">
+          Stop
+        </button>
+        <button type="button" class="btn" id="reset" onclick="reset()">
+          Reset
+        </button>
+      </div>
+    </div>
+
+    <script src="JS/stopwatch.js"></script>
+    <script>
+      $(function () {
+        $("a").each(function () {
+          if ($(this).prop("href") == window.location.href) {
+            $(this).addClass("current");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

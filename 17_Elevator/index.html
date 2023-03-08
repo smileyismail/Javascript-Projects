@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Elevator</title>
+  </head>
+  <body>
+    <div class="controls">
+      <p>Switches</p>
+      <button onclick="{toFloorOne()}">1</button>
+      <button onclick="{toFloorTwo()}">2</button>
+      <button onclick="{toFloorZero()}">0</button>
+    </div>
+    <section>
+      <div class="floor"></div>
+      <div class="floor"></div>
+      <div class="floor"></div>
+      <div class="elevator">
+        <p class="display">0</p>
+      </div>
+    </section>
+    <div class="arrows">
+      <div class="2ndFloor">
+        <i class="fa-solid fa-down-long" onclick="{moveDown()}"></i>
+      </div>
+      <div class="1stFloor">
+        <i class="fa-solid fa-up-long" onclick="{moveUp()}"></i>
+        <i class="fa-solid fa-down-long" onclick="{moveDown()}"></i>
+      </div>
+      <div class="1stFloor">
+        <i class="fa-solid fa-up-long" onclick="{moveUp()}"></i>
+      </div>
+    </div>
+  </body>
+</html>

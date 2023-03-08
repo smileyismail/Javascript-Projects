@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background-color: bisque;
+}
+
+.container {
+  background-color: whitesmoke;
+  padding: 3rem 5rem;
+  border: 0.2rem solid rgba(0, 0, 0, 0.301);
+  border-radius: 1rem;
+  width: 70rem;
+  max-width: 100%;
+  -webkit-box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.55);
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.55);
+}
+
+.container h2 {
+  margin-bottom: 2rem;
+  letter-spacing: 0.2rem;
+  opacity: 0.6;
+  text-decoration: underline;
+}
+
+.joke-container {
+  letter-spacing: 0.5px;
+  font-size: 3rem;
+  margin: 5rem;
+  max-width: 60rem;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: bisque;
+  border: 1px solid rgba(0, 0, 0, 0.425);
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  width: 20rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.55);
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.55);
+}
+
+.btn:hover {
+  background-color: rgba(255, 228, 196, 0.575);
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+/* for Tablets */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .container {
+    width: 60rem;
+    max-width: 100%;
+  }
+}
+
+/* for Smart Phones  */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    width: 50rem;
+    max-width: 100%;
+  }
+}

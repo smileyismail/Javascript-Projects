@@ -1,0 +1,125 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+section {
+  position: relative;
+}
+
+.floor {
+  width: 200px;
+  height: 250px;
+  border: 10px solid #966f33;
+  border-bottom: 8px;
+}
+
+.controls {
+  width: 130px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 19px;
+  flex-wrap: wrap;
+}
+.controls p {
+  font-weight: bolder;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.controls button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f0f0f0, silver);
+  box-shadow: 4px -4px 8px #dedede, -4px 4px 8px #e2e2e2;
+}
+
+.controls button:active {
+  transform: scale(0.94);
+}
+
+.elevator {
+  width: 200px;
+  height: 250px;
+  background-image: url("./assets/elevator.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  border: 8px solid grey;
+  transition: transform 5s ease-in;
+}
+
+.elevator p {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3px;
+  width: 50px;
+  padding: 2px;
+  background-color: black;
+  color: greenyellow;
+}
+
+.arrows div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  height: 250px;
+}
+
+.arrows div i {
+  font-size: 4rem;
+  color: silver;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.arrows div i:hover {
+  color: rgb(150, 150, 150);
+  transform: scale(1.1);
+}
+.arrows div i:active {
+  transform: scale(1.2);
+}
+
+.arrows div i.active {
+  color: #5ca90f;
+}
+
+/* for Tablets */
+@media screen and (max-width: 768px) {
+  html {
+  }
+}
+
+/* for Smart Phones  */
+@media screen and (max-width: 480px) {
+  html {
+  }
+}

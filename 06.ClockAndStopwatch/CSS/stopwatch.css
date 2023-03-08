@@ -1,0 +1,96 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap'); */
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  font-family: "Orbitron", sans-serif;
+}
+
+#stopwatch {
+  text-align: center;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.digit,
+.txt {
+  color: white;
+  min-width: 1rem;
+  position: relative;
+}
+
+.digit {
+  font-size: 13rem;
+  margin: 1rem;
+  width: 21rem;
+}
+
+.txt {
+  margin: 6rem 2rem 0rem -3rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+#buttons {
+  margin-top: 3rem;
+}
+
+.btn {
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  text-align: center;
+  margin: 0rem 2rem;
+  cursor: pointer;
+  border: none;
+  letter-spacing: 0.1rem;
+  color: rgba(14, 14, 14, 0.972);
+}
+
+#start {
+  background-color: #5da271;
+}
+
+#start:hover {
+  background-color: #059e31;
+}
+
+#stop {
+  background-color: #fed766;
+}
+
+#stop:hover {
+  background-color: #ffc004;
+}
+
+#reset {
+  background-color: #e84855;
+}
+
+#reset:hover {
+  background-color: #e80d1f;
+}
+
+/* for Tablets */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* for Smart Phones  */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+  .digit {
+    font-size: 10rem;
+  }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Counter</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background-image: url(assets/Background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: "Lato", sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+        background-color: #172a3a;
+        border-radius: 5px 5px 5px 5px;
+        padding: 8px 15px;
+        color: whitesmoke;
+        position: absolute;
+        top: 0;
+      }
+
+      .container {
+        width: 45vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      label {
+        text-align: center;
+        font-size: 23px;
+        padding: 10px;
+        background-color: #172a3a;
+        color: white;
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+      }
+
+      textarea {
+        width: 100%;
+        height: 250px;
+        border: 4px solid #172a3a;
+        border-top: 0;
+        border-radius: 0px 0px 10px 10px;
+        color: #172a3a;
+        font-size: 18px;
+        resize: none;
+        padding: 10px;
+
+        background: #f9fbf2;
+        box-shadow: inset 5px 5px 28px #dbddd5, inset -5px -5px 28px #ffffff;
+      }
+
+      textarea:focus {
+        outline: 0;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 25px;
+        color: whitesmoke;
+        text-decoration: underline;
+      }
+
+      /* for Tablets */
+      @media screen and (max-width: 768px) {
+        html {
+          font-size: 56.25%;
+        }
+        .container {
+          width: 85vw;
+        }
+      }
+
+      /* for Smart Phones  */
+      @media screen and (max-width: 480px) {
+        html {
+          font-size: 50%;
+        }
+        .container {
+          width: 95vw;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Words and Character Counter</h1>
+    <div class="container">
+      <label for="textbox">
+        <span id="word">0</span> Words and <span id="char">0</span> Characters.
+      </label>
+      <textarea id="textbox" cols="30" rows="10" autofocus></textarea>
+    </div>
+  </body>
+  <script>
+    let textbox = document.getElementById("textbox");
+    textbox.addEventListener("input", function () {
+      let text = this.value;
+      let char = text.length;
+      document.getElementById("char").innerHTML = char;
+
+      text = text.trim();
+      let word = text.split(" ");
+      let fullword = word.filter(function (wrd) {
+        return wrd != "";
+      });
+      document.getElementById("word").innerHTML = fullword.length;
+    });
+  </script>
+</html>

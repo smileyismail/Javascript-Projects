@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-size: 1.8rem;
+
+  font-weight: bolder;
+  display: block;
+}
+
+input {
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1.3rem 2.3rem;
+  margin: 4rem 0.5rem 1rem 0.5rem;
+  width: 25rem;
+  border: 1px solid black;
+  border-radius: 1.1rem;
+  background: #ffffff;
+  box-shadow: inset 13px 13px 26px #ededed, inset -13px -13px 26px #ffffff;
+}
+
+.btn {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 2rem;
+  margin: 1.5rem;
+  min-width: 15rem;
+  border: 1px solid black;
+  border-radius: 1.1rem;
+  background: #a0a0a0;
+  box-shadow: inset 13px 13px 26px #ededed, inset -13px -13px 26px #ffffff;
+}
+
+/* for Tablets */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* for Smart Phones  */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+}

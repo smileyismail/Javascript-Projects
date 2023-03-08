@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url(assets/Background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+        font-family: "Kdam Thmor Pro", sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+        color: #0a0f0d;
+        text-decoration: underline;
+        margin-bottom: 10px;
+      }
+
+      #container {
+        /* width: 50rem; */
+        text-align: center;
+        border: 1px solid #0a0f0d;
+        border-radius: 5px;
+        padding: 30px;
+        border-radius: 16px;
+        border-radius: 22px;
+        background: #eeaa76;
+        box-shadow: inset 15px 15px 30px #c68d62, inset -15px -15px 30px #ffc78a;
+      }
+      .inputContainer {
+        display: inline-block;
+        text-align: center;
+      }
+      input {
+        padding: 7px;
+        font-size: 20px;
+        margin: 15px;
+        font-weight: bold;
+        width: 250px;
+        text-align: center;
+        color: #0a0f0d;
+      }
+      label {
+        font-size: 15px;
+        font-weight: bold;
+        color: #2a1e5c;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Temperature Converter</h1>
+    <div id="container">
+      <div class="inputContainer">
+        <input type="number" value="0" id="cel" /><br />
+        <label for="cel">Celsius</label>
+      </div>
+      <div class="inputContainer">
+        <input type="number" value="32" id="fah" /><br />
+        <label for="fah">Fahrenheit</label>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    var cel = document.getElementById("cel");
+    var fah = document.getElementById("fah");
+
+    cel.addEventListener("change", function () {
+      let c = this.value;
+      let f = (c * 9) / 5 + 32;
+      if (!Number.isInteger(f)) {
+        f = f.toFixed(4);
+      }
+      fah.value = f;
+    });
+
+    fah.addEventListener("change", function () {
+      let f = this.value;
+      let c = ((f - 32) * 5) / 9;
+      if (!Number.isInteger(c)) {
+        c = c.toFixed(4);
+      }
+      cel.value = c;
+    });
+  </script>
+</html>
