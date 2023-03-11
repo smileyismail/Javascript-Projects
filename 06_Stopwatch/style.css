@@ -1,4 +1,19 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: rgba(14, 14, 14, 0.972);
+}
 
 #container {
   display: flex;
@@ -12,7 +27,6 @@
 #stopwatch {
   text-align: center;
   display: flex;
-
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
