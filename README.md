@@ -1,6 +1,6 @@
 # JavaScript Projects
 
-This website provides details and ratings of the movies, with new, popular, trending and top-rated films constantly updated through a connection to an API.
+Many small JavaScript projects that showcase basic functionalities and logic, such as form validation, DOM manipulation, animations, user interaction, etc...
 
 ## Demo
 
