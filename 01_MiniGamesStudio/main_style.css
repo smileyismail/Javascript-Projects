@@ -170,7 +170,6 @@ footer {
   width: 100%;
   background-color: #008f95;
   bottom: 0;
-  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
